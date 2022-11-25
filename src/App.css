@@ -1,0 +1,141 @@
+*
+{
+  padding: 0;
+  margin: 0;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+/*  Home Style   */
+.App .home,
+.App .game-over
+{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.App .home .timer-container
+{
+  height: 40%;
+  position: relative;
+}
+.App .home .timer
+{
+  width: 80px;
+  height: 80px;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.App .home .quiz-container
+{
+  padding: 70px 0 0 0;
+}
+.App .home .quiz-container .quiz,
+.App .game-over
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.App .home .quiz-container .quiz .question
+{
+  width: 80%;
+  margin-bottom: 30px;
+}
+.App .home .quiz-container .quiz .question h4
+{
+  padding: 15px 60px;
+  border: 2px solid #FFF;
+  border-radius: 15px;
+  text-align: center;
+}
+.App .home .quiz-container .quiz .answers
+{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.App .home .quiz-container .quiz .answers .answer
+{
+  padding: 10px 0;
+  border: 2px solid #FFF;
+  border-radius: 15px;
+  width: 35%;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.App .home .quiz-container .quiz .answers .answer:hover
+{
+  background-color: blueviolet;
+}
+
+
+.App .home .quiz-container .quiz .answers .answer.active
+{
+  animation: flash 2s;
+
+}
+
+.App .home .quiz-container .quiz .answers .answer.correct
+{
+  background-color:rgb(2, 214, 2);
+}
+
+.App .home .quiz-container .quiz .answers .answer.wrong
+{
+  background-color: crimson; 
+}
+
+@keyframes flash {
+  0%,30%,50%,70%,90% 
+  {
+    background-color: blueviolet;
+  }
+  15%,40%,60%,80%,100% 
+  {
+    background-color: #1b1523;
+  }
+}
+
+
+/*  Side-Bar Style   */
+.App .side-bar
+{
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .side-bar ul
+{
+  list-style: none;
+  width: 100%;
+}
+.App .side-bar ul .reward-item
+{
+  margin: 15px 0;
+  text-align: center;
+  width: 80%;
+  padding: 5px 0;
+  border-radius: 10px;
+}
+.App .side-bar ul .reward-item.active
+{
+  background-color: blueviolet;
+}
